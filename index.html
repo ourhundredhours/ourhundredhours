@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home — Our Hundred Hours</title>
+  <meta name="description" content="A space for curious minds committed to lifelong learning and meaningful personal growth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="ohh-nav">
+    <div class="ohh-nav-inner">
+      <a href="index.html" class="ohh-logo">
+        <div class="ohh-logo-icon">OH</div>
+        Our Hundred Hours
+      </a>
+      <ul class="ohh-nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html" class="">About</a></li>
+        <li><a href="blog.html" class="">Blog</a></li>
+        <li><a href="contact.html" class="">Contact</a></li>
+      </ul>
+      <button class="ohh-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="ohh-hero">
+      <div class="ohh-hero-inner">
+        <span class="ohh-hero-tag">A journey of learning &amp; growth</span>
+        <h1>Every hour is a step <span>forward</span></h1>
+        <p>Welcome to Our Hundred Hours — a space dedicated to the art of continuous learning, thoughtful reflection, and meaningful personal growth.</p>
+        <div class="ohh-hero-buttons">
+          <a href="blog.html" class="ohh-btn ohh-btn-primary">
+            Explore the Blog
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="about.html" class="ohh-btn ohh-btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ohh-section">
+      <div class="ohh-section-header">
+        <h2>What We Explore</h2>
+        <p>Topics that fuel curiosity and inspire action</p>
+        <div class="ohh-divider"></div>
+      </div>
+      <div class="ohh-features">
+        <div class="ohh-feature-card">
+          <div class="ohh-feature-icon">&#128218;</div>
+          <h3>Lifelong Learning</h3>
+          <p>Embracing new skills, ideas, and perspectives at every stage of life. The journey of knowledge never truly ends.</p>
+        </div>
+        <div class="ohh-feature-card">
+          <div class="ohh-feature-icon">&#127793;</div>
+          <h3>Personal Growth</h3>
+          <p>Cultivating habits, mindsets, and practices that help us become the best versions of ourselves.</p>
+        </div>
+        <div class="ohh-feature-card">
+          <div class="ohh-feature-icon">&#128161;</div>
+          <h3>Reflective Thinking</h3>
+          <p>Taking time to pause, reflect, and make sense of our experiences to guide future decisions.</p>
+        </div>
+        <div class="ohh-feature-card">
+          <div class="ohh-feature-icon">&#129309;</div>
+          <h3>Meaningful Connections</h3>
+          <p>Building relationships and communities that support and enrich our journey of growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="ohh-section" style="background: var(--bg-cream); margin: 0; max-width: 100%;">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <div class="ohh-section-header">
+          <h2>Latest from the Blog</h2>
+          <p>Thoughts, insights, and stories from the journey</p>
+          <div class="ohh-divider"></div>
+        </div>
+        <div class="ohh-blog-grid">
+          <a href="blog.html" class="ohh-blog-card">
+            <div class="ohh-blog-image">&#9997;</div>
+            <div class="ohh-blog-content">
+              <span class="ohh-blog-tag">Learning</span>
+              <div class="ohh-blog-meta">
+                <span>&#128197; 28 July 2026</span>
+                <span>&#9201; 6 min read</span>
+              </div>
+              <h3>The Power of Deliberate Practice</h3>
+              <p>How focused, intentional effort transforms ordinary practice into extraordinary skill development over time.</p>
+              <span class="ohh-read-more">Read more &rarr;</span>
+            </div>
+          </a>
+          <a href="blog.html" class="ohh-blog-card">
+            <div class="ohh-blog-image">&#127775;</div>
+            <div class="ohh-blog-content">
+              <span class="ohh-blog-tag">Growth</span>
+              <div class="ohh-blog-meta">
+                <span>&#128197; 21 July 2026</span>
+                <span>&#9201; 5 min read</span>
+              </div>
+              <h3>Embracing the Growth Mindset</h3>
+              <p>Why believing in your ability to grow and improve is the foundation of all meaningful personal development.</p>
+              <span class="ohh-read-more">Read more &rarr;</span>
+            </div>
+          </a>
+          <a href="blog.html" class="ohh-blog-card">
+            <div class="ohh-blog-image">&#128170;</div>
+            <div class="ohh-blog-content">
+              <span class="ohh-blog-tag">Habits</span>
+              <div class="ohh-blog-meta">
+                <span>&#128197; 14 July 2026</span>
+                <span>&#9201; 7 min read</span>
+              </div>
+              <h3>Building Habits That Stick</h3>
+              <p>A practical guide to creating lasting habits through small, consistent actions and environmental design.</p>
+              <span class="ohh-read-more">Read more &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ohh-footer">
+    <div class="ohh-footer-inner">
+      <div class="ohh-footer-brand">
+        <a href="index.html" class="ohh-logo">
+          <div class="ohh-logo-icon">OH</div>
+          Our Hundred Hours
+        </a>
+        <p>A space for curious minds committed to lifelong learning and meaningful growth. Every hour is a step forward.</p>
+      </div>
+      <div class="ohh-footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ohh-footer-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-use.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ohh-footer-bottom">
+      <p>&copy; 2026 Our Hundred Hours. All rights reserved.</p>
+      <div class="ohh-social">
+        <a href="#" aria-label="Twitter">X</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="GitHub">gh</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Our Hundred Hours</title>
+  <meta name="description" content="A space for curious minds committed to lifelong learning and meaningful personal growth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="ohh-nav">
+    <div class="ohh-nav-inner">
+      <a href="index.html" class="ohh-logo">
+        <div class="ohh-logo-icon">OH</div>
+        Our Hundred Hours
+      </a>
+      <ul class="ohh-nav-links" id="navLinks">
+        <li><a href="index.html" class="">Home</a></li>
+        <li><a href="about.html" class="">About</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html" class="">Contact</a></li>
+      </ul>
+      <button class="ohh-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="ohh-hero" style="padding: 80px 24px 60px;">
+      <div class="ohh-hero-inner">
+        <span class="ohh-hero-tag">The Blog</span>
+        <h1>Thoughts on <span>learning</span> &amp; <span>growth</span></h1>
+        <p>Articles, reflections, and practical insights for the curious mind.</p>
+      </div>
+    </section>
+
+    <section class="ohh-section">
+      <div class="ohh-blog-grid">
+        <article class="ohh-blog-card">
+          <div class="ohh-blog-image">&#9997;</div>
+          <div class="ohh-blog-content">
+            <span class="ohh-blog-tag">Learning</span>
+            <div class="ohh-blog-meta">
+              <span>&#128197; 28 July 2026</span>
+              <span>&#9201; 6 min read</span>
+            </div>
+            <h3>The Power of Deliberate Practice</h3>
+            <p>How focused, intentional effort transforms ordinary practice into extraordinary skill development over time.</p>
+            <span class="ohh-read-more">Read more &rarr;</span>
+          </div>
+        </article>
+        <article class="ohh-blog-card">
+          <div class="ohh-blog-image">&#127775;</div>
+          <div class="ohh-blog-content">
+            <span class="ohh-blog-tag">Growth</span>
+            <div class="ohh-blog-meta">
+              <span>&#128197; 21 July 2026</span>
+              <span>&#9201; 5 min read</span>
+            </div>
+            <h3>Embracing the Growth Mindset</h3>
+            <p>Why believing in your ability to grow and improve is the foundation of all meaningful personal development.</p>
+            <span class="ohh-read-more">Read more &rarr;</span>
+          </div>
+        </article>
+        <article class="ohh-blog-card">
+          <div class="ohh-blog-image">&#128170;</div>
+          <div class="ohh-blog-content">
+            <span class="ohh-blog-tag">Habits</span>
+            <div class="ohh-blog-meta">
+              <span>&#128197; 14 July 2026</span>
+              <span>&#9201; 7 min read</span>
+            </div>
+            <h3>Building Habits That Stick</h3>
+            <p>A practical guide to creating lasting habits through small, consistent actions and environmental design.</p>
+            <span class="ohh-read-more">Read more &rarr;</span>
+          </div>
+        </article>
+        <article class="ohh-blog-card">
+          <div class="ohh-blog-image">&#128161;</div>
+          <div class="ohh-blog-content">
+            <span class="ohh-blog-tag">Reflection</span>
+            <div class="ohh-blog-meta">
+              <span>&#128197; 7 July 2026</span>
+              <span>&#9201; 4 min read</span>
+            </div>
+            <h3>The Art of Slow Thinking</h3>
+            <p>In a world obsessed with speed, we explore the profound value of slowing down, thinking deeply, and making decisions with clarity.</p>
+            <span class="ohh-read-more">Read more &rarr;</span>
+          </div>
+        </article>
+        <article class="ohh-blog-card">
+          <div class="ohh-blog-image">&#129504;</div>
+          <div class="ohh-blog-content">
+            <span class="ohh-blog-tag">Learning</span>
+            <div class="ohh-blog-meta">
+              <span>&#128197; 30 June 2026</span>
+              <span>&#9201; 8 min read</span>
+            </div>
+            <h3>How to Learn Anything Faster</h3>
+            <p>Evidence-based techniques for accelerating your learning, from spaced repetition to the Feynman Technique and interleaved practice.</p>
+            <span class="ohh-read-more">Read more &rarr;</span>
+          </div>
+        </article>
+        <article class="ohh-blog-card">
+          <div class="ohh-blog-image">&#127758;</div>
+          <div class="ohh-blog-content">
+            <span class="ohh-blog-tag">Perspective</span>
+            <div class="ohh-blog-meta">
+              <span>&#128197; 23 June 2026</span>
+              <span>&#9201; 5 min read</span>
+            </div>
+            <h3>Finding Meaning in the Process</h3>
+            <p>Why focusing on the journey rather than the destination leads to deeper fulfilment and more sustainable motivation.</p>
+            <span class="ohh-read-more">Read more &rarr;</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ohh-footer">
+    <div class="ohh-footer-inner">
+      <div class="ohh-footer-brand">
+        <a href="index.html" class="ohh-logo">
+          <div class="ohh-logo-icon">OH</div>
+          Our Hundred Hours
+        </a>
+        <p>A space for curious minds committed to lifelong learning and meaningful growth. Every hour is a step forward.</p>
+      </div>
+      <div class="ohh-footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ohh-footer-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-use.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ohh-footer-bottom">
+      <p>&copy; 2026 Our Hundred Hours. All rights reserved.</p>
+      <div class="ohh-social">
+        <a href="#" aria-label="Twitter">X</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="GitHub">gh</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

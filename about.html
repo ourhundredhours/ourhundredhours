@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Our Hundred Hours</title>
+  <meta name="description" content="A space for curious minds committed to lifelong learning and meaningful personal growth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="ohh-nav">
+    <div class="ohh-nav-inner">
+      <a href="index.html" class="ohh-logo">
+        <div class="ohh-logo-icon">OH</div>
+        Our Hundred Hours
+      </a>
+      <ul class="ohh-nav-links" id="navLinks">
+        <li><a href="index.html" class="">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="blog.html" class="">Blog</a></li>
+        <li><a href="contact.html" class="">Contact</a></li>
+      </ul>
+      <button class="ohh-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="ohh-about-hero">
+      <div class="ohh-hero-inner">
+        <span class="ohh-hero-tag">Our Story</span>
+        <h1>Our Hundred Hours</h1>
+        <p>A space for curious minds committed to lifelong learning and meaningful growth.</p>
+      </div>
+    </section>
+
+    <div class="ohh-about-content">
+      <h2>Why "Hundred Hours"?</h2>
+      <p>The name <strong>Our Hundred Hours</strong> comes from a simple belief: meaningful change begins with intentional time. Whether it is a hundred hours spent mastering a new skill, a hundred hours of reflection, or a hundred hours of showing up consistently — every hour invested in yourself compounds into something remarkable.</p>
+      <p>This blog is a chronicle of that journey. It is a place where we explore ideas, share insights, and document the process of learning and growing together.</p>
+
+      <h2>What We Believe</h2>
+      <div class="ohh-values">
+        <div class="ohh-value-item">
+          <h4>Curiosity First</h4>
+          <p>We believe that asking better questions leads to better answers and a richer life.</p>
+        </div>
+        <div class="ohh-value-item">
+          <h4>Progress Over Perfection</h4>
+          <p>Small, consistent steps matter more than grand, unsustainable gestures.</p>
+        </div>
+        <div class="ohh-value-item">
+          <h4>Learning in Public</h4>
+          <p>Sharing our journey helps others and deepens our own understanding.</p>
+        </div>
+        <div class="ohh-value-item">
+          <h4>Reflection Matters</h4>
+          <p>Taking time to think is not wasted time — it is where insight lives.</p>
+        </div>
+      </div>
+
+      <h2>The Journey Ahead</h2>
+      <p>Our Hundred Hours is more than a blog — it is a commitment. A commitment to showing up, to staying curious, and to embracing the beautiful, messy process of becoming better every single day.</p>
+      <p>We invite you to join us. Read along, share your thoughts, and perhaps start counting your own hundred hours. The clock is ticking, and every hour is an opportunity.</p>
+    </div>
+  </main>
+
+  <footer class="ohh-footer">
+    <div class="ohh-footer-inner">
+      <div class="ohh-footer-brand">
+        <a href="index.html" class="ohh-logo">
+          <div class="ohh-logo-icon">OH</div>
+          Our Hundred Hours
+        </a>
+        <p>A space for curious minds committed to lifelong learning and meaningful growth. Every hour is a step forward.</p>
+      </div>
+      <div class="ohh-footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ohh-footer-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-use.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ohh-footer-bottom">
+      <p>&copy; 2026 Our Hundred Hours. All rights reserved.</p>
+      <div class="ohh-social">
+        <a href="#" aria-label="Twitter">X</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="GitHub">gh</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
