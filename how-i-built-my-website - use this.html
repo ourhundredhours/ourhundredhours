@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I Built My Website With GitHub and Cloudflare Pages — Our Hundred Hours</title>
+  <meta name="description" content="How I built my own website from scratch using GitHub and Cloudflare Pages, starting with almost no knowledge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .ohh-article-hero {
+      background: var(--bg-cream);
+      padding: 80px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .ohh-article-hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212,165,116,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .ohh-article-hero-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .ohh-article-hero .ohh-blog-tag {
+      margin-bottom: 20px;
+    }
+    .ohh-article-hero h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    .ohh-article-hero .ohh-blog-meta {
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    .ohh-article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .ohh-article-body h2 {
+      font-size: 26px;
+      margin: 40px 0 16px;
+    }
+    .ohh-article-body h3 {
+      font-size: 20px;
+      margin: 28px 0 12px;
+      color: var(--primary);
+    }
+    .ohh-article-body p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-body);
+      margin-bottom: 20px;
+    }
+    .ohh-article-body strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+    .ohh-article-body em {
+      color: var(--accent);
+      font-style: italic;
+    }
+    .ohh-article-nav {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .ohh-article-nav a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+    .ohh-article-nav a:hover {
+      color: var(--accent);
+    }
+    .ohh-article-nav .back-link svg {
+      transition: transform 0.2s ease;
+    }
+    .ohh-article-nav .back-link:hover svg {
+      transform: translateX(-4px);
+    }
+    @media (max-width: 768px) {
+      .ohh-article-hero { padding: 60px 24px 30px; }
+      .ohh-article-body { padding: 32px 24px 50px; }
+      .ohh-article-body p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="ohh-nav">
+    <div class="ohh-nav-inner">
+      <a href="../index.html" class="ohh-logo">
+        <div class="ohh-logo-icon">OH</div>
+        Our Hundred Hours
+      </a>
+      <ul class="ohh-nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../blog.html" class="active">Blog</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <button class="ohh-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="ohh-article-hero">
+      <div class="ohh-article-hero-inner">
+        <span class="ohh-blog-tag">Building</span>
+        <h1>How I Built My Website With GitHub and Cloudflare Pages</h1>
+        <div class="ohh-blog-meta">
+          <span>&#128197; 3 August 2026</span>
+          <span>&#9201; 12 min read</span>
+        </div>
+      </div>
+    </section>
+
+    <article class="ohh-article-body">
+<p>Building a website always felt like something that required advanced technical skills.</p>
+<p>Before starting this journey, my understanding of websites was very limited. I only knew some basic HTML and CSS.</p>
+<p>Concepts like hosting, servers, domains, DNS, and deployment were completely unfamiliar.</p>
+<p>At that time, creating a website seemed like something that only developers could do.</p>
+<p>However, I wanted to build something of my own.</p>
+<p>I wanted a place where I could share my learning journey, document my projects, and create a digital space that belonged to me.</p>
+<p>Instead of waiting until I understood everything, I decided to learn by building.</p>
+<p>That became the beginning of my website journey.</p>
+<h2>Why I Wanted To Build My Own Website</h2>
+<p>Many people start their online presence through existing platforms.</p>
+<p>Social media platforms are convenient, but there is always a limitation.</p>
+<p>The platform controls the design, user experience, and how content reaches people.</p>
+<p>A personal website provides something different.</p>
+<p>It becomes a place that you own.</p>
+<p>A place where you can:</p>
+<h2>Share knowledge</h2>
+<h2>Document projects</h2>
+<h2>Build your personal brand</h2>
+<h2>Create long-term value</h2>
+<p>The goal was not to create a perfect website immediately.</p>
+<p>The goal was to create a foundation and improve it step by step.</p>
+<h2>Learning How Websites Actually Work</h2>
+<p>Before building the website, there were many things that needed to be understood.</p>
+<p>A website is not just a visual page.</p>
+<p>Behind every website, there are several important parts:</p>
+<h2>Domain Name</h2>
+<p>The address people use to visit a website.</p>
+<p>For example:</p>
+<p>yourwebsite.com</p>
+<h2>Hosting</h2>
+<p>The place where website files are stored so people can access them online.</p>
+<h2>Website Files</h2>
+<p>The actual files that create the website.</p>
+<p>For a simple static website, these usually include:</p>
+<h2>HTML</h2>
+<h2>CSS</h2>
+<h2>JavaScript</h2>
+<h2>Images</h2>
+<p>Previously, website hosting seemed complicated and expensive.</p>
+<p>Then I discovered another approach:</p>
+<p>GitHub + Cloudflare Pages.</p>
+<p>This changed the way I looked at website building.</p>
+<h2>Why I Chose GitHub and Cloudflare Pages</h2>
+<p>There are many ways to create a website.</p>
+<p>Some people use website builders.</p>
+<p>Some use content management systems.</p>
+<p>Some use traditional web hosting.</p>
+<p>For this project, GitHub and Cloudflare Pages felt like the right choice.</p>
+<p>GitHub allows website files to be stored and managed.</p>
+<p>Although many people know GitHub as a platform for developers, it can also be used for managing a static website project.</p>
+<p>Cloudflare Pages connects with GitHub and automatically publishes website files online.</p>
+<p>The workflow became simple:</p>
+<p>Create website files → Upload to GitHub → Connect Cloudflare Pages → Website goes live</p>
+<p>This approach removed the need to manage a traditional hosting server.</p>
+<p>It allowed more time to focus on learning, creating, and improving the website.</p>
+<h2>Step-by-Step: How I Built My Website</h2>
+<p>After understanding the basic concept, the next challenge was turning the idea into a real website.</p>
+<p>The process became much easier when broken into smaller steps.</p>
+<h2>Step 1: Creating a GitHub Repository</h2>
+
+<div style="width: 100%; border-radius: var(--radius-lg); overflow: hidden; margin: 32px 0; border: 1px solid var(--border-light);">
+  <div style="width: 100%; aspect-ratio: 16 / 9; background: var(--bg-warm); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--accent); font-size: 15px; text-align: center; padding: 40px 24px;">
+    <span style="font-size: 40px; opacity: 0.6;">&#128248;</span>
+    <span style="font-weight: 600; color: var(--primary); font-size: 14px; letter-spacing: 0.5px;">PHOTO PLACEHOLDER</span>
+    <span style="color: var(--text-muted); font-size: 13px; max-width: 400px; line-height: 1.5;">Replace this with your screenshot. Save image to <code style="background: white; padding: 2px 6px; border-radius: 4px;">images/</code> folder and update the <code style="background: white; padding: 2px 6px; border-radius: 4px;">src</code> path below.</span>
+  </div>
+  <!-- <img src="../images/your-photo.jpg" alt="Description" style="width: 100%; height: auto; display: block;"> -->
+  <div style="text-align: center; font-size: 13px; color: var(--text-muted); padding: 12px 16px; background: var(--bg-cream); border-top: 1px solid var(--border-light);">Add your caption here.</div>
+</div>
+
+<p>The first step was creating a GitHub account and setting up a repository.</p>
+<p>A repository is basically a folder where website files are stored and managed.</p>
+<p>For a simple static website, the structure looks like this:</p>
+<pre style="background: var(--bg-cream); padding: 16px 20px; border-radius: var(--radius-sm); font-family: monospace; font-size: 14px; color: var(--primary); overflow-x: auto; margin: 20px 0; border: 1px solid var(--border-light);"><code>website/
+├── index.html
+├── style.css
+├── script.js
+└── images/</code></pre>
+<p>Each file has its own purpose.</p>
+<p>index.html</p>
+<p>This is the most important file.</p>
+<p>It controls the main structure of the website and usually acts as the homepage.</p>
+<p>style.css</p>
+<p>This controls the visual appearance:</p>
+<h2>Layout</h2>
+<h2>Colors</h2>
+<h2>Spacing</h2>
+<h2>Typography</h2>
+<p>script.js</p>
+<p>This adds interactive features and allows the website to respond to user actions.</p>
+<pre style="background: var(--bg-cream); padding: 16px 20px; border-radius: var(--radius-sm); font-family: monospace; font-size: 14px; color: var(--primary); overflow-x: auto; margin: 20px 0; border: 1px solid var(--border-light);"><code>images/</code></pre>
+<p>This stores visual content used throughout the website.</p>
+<p>At this stage, the focus was not creating something complicated.</p>
+<p>The goal was simply creating a foundation that could grow over time.</p>
+<h2>Step 2: Uploading Website Files</h2>
+
+<div style="width: 100%; border-radius: var(--radius-lg); overflow: hidden; margin: 32px 0; border: 1px solid var(--border-light);">
+  <div style="width: 100%; aspect-ratio: 16 / 9; background: var(--bg-warm); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--accent); font-size: 15px; text-align: center; padding: 40px 24px;">
+    <span style="font-size: 40px; opacity: 0.6;">&#128248;</span>
+    <span style="font-weight: 600; color: var(--primary); font-size: 14px; letter-spacing: 0.5px;">PHOTO PLACEHOLDER</span>
+    <span style="color: var(--text-muted); font-size: 13px; max-width: 400px; line-height: 1.5;">Replace this with your screenshot. Save image to <code style="background: white; padding: 2px 6px; border-radius: 4px;">images/</code> folder and update the <code style="background: white; padding: 2px 6px; border-radius: 4px;">src</code> path below.</span>
+  </div>
+  <!-- <img src="../images/your-photo.jpg" alt="Description" style="width: 100%; height: auto; display: block;"> -->
+  <div style="text-align: center; font-size: 13px; color: var(--text-muted); padding: 12px 16px; background: var(--bg-cream); border-top: 1px solid var(--border-light);">Add your caption here.</div>
+</div>
+
+<p>After creating the repository, the next step was uploading the website files.</p>
+<p>A simple website may look basic, but each element plays an important role.</p>
+<p>HTML creates the structure.</p>
+<p>CSS creates the design.</p>
+<p>JavaScript adds interaction.</p>
+<p>Images create visual experiences.</p>
+<p>When these elements work together, even a simple website can become something meaningful.</p>
+<p>The important lesson was that advanced technology is not always required to start.</p>
+<p>Understanding the basics and putting them together is already enough to create something real.</p>
+<h2>Step 3: Connecting GitHub to Cloudflare Pages</h2>
+
+<div style="width: 100%; border-radius: var(--radius-lg); overflow: hidden; margin: 32px 0; border: 1px solid var(--border-light);">
+  <div style="width: 100%; aspect-ratio: 16 / 9; background: var(--bg-warm); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--accent); font-size: 15px; text-align: center; padding: 40px 24px;">
+    <span style="font-size: 40px; opacity: 0.6;">&#128248;</span>
+    <span style="font-weight: 600; color: var(--primary); font-size: 14px; letter-spacing: 0.5px;">PHOTO PLACEHOLDER</span>
+    <span style="color: var(--text-muted); font-size: 13px; max-width: 400px; line-height: 1.5;">Replace this with your screenshot. Save image to <code style="background: white; padding: 2px 6px; border-radius: 4px;">images/</code> folder and update the <code style="background: white; padding: 2px 6px; border-radius: 4px;">src</code> path below.</span>
+  </div>
+  <!-- <img src="../images/your-photo.jpg" alt="Description" style="width: 100%; height: auto; display: block;"> -->
+  <div style="text-align: center; font-size: 13px; color: var(--text-muted); padding: 12px 16px; background: var(--bg-cream); border-top: 1px solid var(--border-light);">Add your caption here.</div>
+</div>
+
+<p>The next step was connecting the GitHub repository with Cloudflare Pages.</p>
+<p>Cloudflare Pages automatically detects the website files stored in GitHub and deploys them online.</p>
+<p>After completing the setup process, the website became available through a public URL.</p>
+<p>Seeing the website live for the first time was a meaningful moment.</p>
+<p>A project that started with a few simple files had become a real website that people could access from anywhere.</p>
+<p>That experience changed my understanding of building online projects.</p>
+<h2>Step 4: Connecting My Personal Domain</h2>
+
+<div style="width: 100%; border-radius: var(--radius-lg); overflow: hidden; margin: 32px 0; border: 1px solid var(--border-light);">
+  <div style="width: 100%; aspect-ratio: 16 / 9; background: var(--bg-warm); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--accent); font-size: 15px; text-align: center; padding: 40px 24px;">
+    <span style="font-size: 40px; opacity: 0.6;">&#128248;</span>
+    <span style="font-weight: 600; color: var(--primary); font-size: 14px; letter-spacing: 0.5px;">PHOTO PLACEHOLDER</span>
+    <span style="color: var(--text-muted); font-size: 13px; max-width: 400px; line-height: 1.5;">Replace this with your screenshot. Save image to <code style="background: white; padding: 2px 6px; border-radius: 4px;">images/</code> folder and update the <code style="background: white; padding: 2px 6px; border-radius: 4px;">src</code> path below.</span>
+  </div>
+  <!-- <img src="../images/your-photo.jpg" alt="Description" style="width: 100%; height: auto; display: block;"> -->
+  <div style="text-align: center; font-size: 13px; color: var(--text-muted); padding: 12px 16px; background: var(--bg-cream); border-top: 1px solid var(--border-light);">Add your caption here.</div>
+</div>
+
+<p>The final step was connecting a personal domain.</p>
+<p>This required learning about DNS settings and domain configuration.</p>
+<p>At first, terms like:</p>
+<h2>DNS records</h2>
+<h2>Nameservers</h2>
+<h2>Domain settings</h2>
+<p>felt technical.</p>
+<p>But after going through the process, these concepts became much easier to understand.</p>
+<p>Once everything was configured correctly, the website became accessible through my own domain.</p>
+<p>No traditional hosting plan was required.</p>
+<p>The entire setup was built using GitHub and Cloudflare Pages.</p>
+<h2>The Challenges I Faced</h2>
+<p>The process was not always smooth.</p>
+<p>There were many new concepts to learn.</p>
+<h2>Understanding GitHub</h2>
+<p>At the beginning, GitHub felt confusing.</p>
+<p>Terms like:</p>
+<h2>Repository</h2>
+<h2>Commit</h2>
+<h2>Branch</h2>
+<h2>Deployment</h2>
+<p>were completely new.</p>
+<p>Instead of trying to understand everything at once, the focus was only on learning what was needed.</p>
+<p>The goal was simple:</p>
+<p>Learn enough to upload files.</p>
+<p>Learn enough to update the website.</p>
+<p>Then continue improving.</p>
+<h2>Understanding Website Deployment</h2>
+<p>Publishing a website for the first time also created many questions.</p>
+<h2>Why does the website update automatically?</h2>
+<h2>Why does a small change require deployment?</h2>
+<h2>Why does the website sometimes need time before changes appear?</h2>
+<p>These were things that only became clear through practice.</p>
+<p>Reading about concepts helped, but experiencing the process created a deeper understanding.</p>
+<h2>Connecting The Domain</h2>
+<p>Connecting a personal domain was another challenge.</p>
+<p>DNS settings were completely unfamiliar.</p>
+<p>There were moments when the website did not work immediately.</p>
+<p>Instead of seeing these problems as failures, they became opportunities to understand how websites actually work.</p>
+<p>Every problem solved became another skill gained.</p>
+<h2>What I Learned From Building My First Website</h2>
+<p>The biggest lesson was simple:</p>
+<p>You do not need to know everything before starting.</p>
+<p>Before this project, website building felt like something that required professional knowledge.</p>
+<p>But the process showed something different.</p>
+<p>The fastest way to learn is often by creating something real.</p>
+<p>When a problem appears, there is a reason to learn.</p>
+<p>When there is something to build, knowledge becomes more meaningful.</p>
+<p>Small progress creates confidence.</p>
+<h2>What Beginners Can Learn From My Experience</h2>
+<p>If you want to build your first website, start simple.</p>
+<h2>Learn The Fundamentals</h2>
+<p>Basic HTML and CSS are enough to create your first version.</p>
+<p>You do not need to master every technology before beginning.</p>
+<h2>Build Before You Feel Ready</h2>
+<p>Many people wait until they have the perfect plan.</p>
+<p>But the first version does not need to be perfect.</p>
+<p>A simple website that exists can always be improved.</p>
+<p>A perfect idea that never starts cannot grow.</p>
+<h2>Learn Step By Step</h2>
+<p>Technology can feel overwhelming because there are many things to learn.</p>
+<p>The solution is not learning everything at once.</p>
+<p>Learn based on the problems you face.</p>
+<p>Each challenge becomes part of your learning journey.</p>
+<h2>Create Something You Own</h2>
+<p>A personal website is more than a webpage.</p>
+<p>It is a place to collect knowledge, share experiences, and document growth.</p>
+<p>Over time, it becomes a reflection of your journey.</p>
+<h2>Continuing The Journey</h2>
+<p>Building this website was not only about creating an online page.</p>
+<p>It was about proving that learning through action works.</p>
+<p>The journey started with basic HTML and CSS.</p>
+<p>Then it expanded into GitHub, Cloudflare Pages, domains, and website deployment.</p>
+<p>There are still many things to improve.</p>
+<p>But every update, mistake, and improvement moves the project forward.</p>
+<p>Progress does not come from waiting until everything is perfect.</p>
+<p>It comes from taking the first step.</p>
+<p>Learn.</p>
+<p>Build.</p>
+<p>Reflect.</p>
+<p>Improve.</p>
+<p>Every step counts.</p>
+</article>
+
+    <div class="ohh-article-nav">
+      <a href="../blog.html" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Blog
+      </a>
+      <a href="../contact.html">
+        Get in Touch
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </main>
+
+  <footer class="ohh-footer">
+    <div class="ohh-footer-inner">
+      <div class="ohh-footer-brand">
+        <a href="../index.html" class="ohh-logo">
+          <div class="ohh-logo-icon">OH</div>
+          Our Hundred Hours
+        </a>
+        <p>A space for curious minds committed to lifelong learning and meaningful growth. Every hour is a step forward.</p>
+      </div>
+      <div class="ohh-footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ohh-footer-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="../terms-of-use.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ohh-footer-bottom">
+      <p>&copy; 2026 Our Hundred Hours. All rights reserved.</p>
+      <div class="ohh-social">
+        <a href="#" aria-label="Twitter">X</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="GitHub">gh</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
